@@ -6,7 +6,7 @@
 /*   By: aklaikel <aklaikel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/16 18:40:04 by ael-hamd          #+#    #+#             */
-/*   Updated: 2022/09/29 22:55:30 by aklaikel         ###   ########.fr       */
+/*   Updated: 2022/09/29 23:36:09 by aklaikel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -131,6 +131,7 @@ typedef struct s_cub {
 	bool		doorhit;
 	t_image		minimap;
 	t_image		butterfly[4];
+	t_image		man[29];
 	t_image		*draw;
 }	t_cub;
 

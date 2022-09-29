@@ -6,7 +6,7 @@
 /*   By: aklaikel <aklaikel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 05:20:49 by aklaikel          #+#    #+#             */
-/*   Updated: 2022/09/29 22:50:30 by aklaikel         ###   ########.fr       */
+/*   Updated: 2022/09/29 23:45:20 by aklaikel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@ void	_free_(t_cub *cub)
 	int	i;
 
 	i = -1;
-	while (++i < 0)
-		if (cub->butterfly[i].image)
-			mlx_destroy_image(cub->mlx_ptr, cub->butterfly[i].image);
+	while (++i <= 29)
+		if (cub->man[i].image)
+			mlx_destroy_image(cub->mlx_ptr, cub->man[i].image);
 	if (cub->no.image)
 		mlx_destroy_image(cub->mlx_ptr, cub->no.image);
 	if (cub->so.image)
