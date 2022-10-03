@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   cub3d.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ael-hamd <ael-hamd@student.42.fr>          +#+  +:+       +#+        */
+/*   By: aklaikel <aklaikel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/16 18:40:04 by ael-hamd          #+#    #+#             */
-/*   Updated: 2022/10/03 18:25:46 by ael-hamd         ###   ########.fr       */
+/*   Updated: 2022/10/03 21:13:12 by aklaikel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -131,7 +131,6 @@ typedef struct s_cub {
 	bool		doorhit;
 	t_image		minimap;
 	t_image		butterfly[4];
-	t_image		man[29];
 	t_image		*draw;
 }	t_cub;
 

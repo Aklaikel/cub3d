@@ -6,7 +6,7 @@
 /*   By: aklaikel <aklaikel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 21:09:14 by aklaikel          #+#    #+#             */
-/*   Updated: 2022/09/30 00:10:36 by aklaikel         ###   ########.fr       */
+/*   Updated: 2022/10/03 21:27:53 by aklaikel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,22 @@ void	move_left(t_cub *cub)
 
 int	ft_exit(t_cub *cub)
 {
+	int	i;
+
+	i = -1;
+	while (++i)
+		if (cub->butterfly[i].image)
+			mlx_destroy_image(cub->mlx_ptr, cub->butterfly[i].image);
+	if (cub->door.image)
+		mlx_destroy_image(cub->mlx_ptr, cub->door.image);
+	if (cub->ea.image)
+		mlx_destroy_image(cub->mlx_ptr, cub->ea.image);
+	if (cub->we.image)
+		mlx_destroy_image(cub->mlx_ptr, cub->we.image);
+	if (cub->so.image)
+		mlx_destroy_image(cub->mlx_ptr, cub->so.image);
+	if (cub->no.image)
+		mlx_destroy_image(cub->mlx_ptr, cub->no.image);
 	free(cub);
 	exit(0);
-	return (0);
 }

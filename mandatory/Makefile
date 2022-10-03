@@ -6,7 +6,7 @@
 #    By: aklaikel <aklaikel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/16 18:45:57 by ael-hamd          #+#    #+#              #
-#    Updated: 2022/09/29 23:13:28 by aklaikel         ###   ########.fr        #
+#    Updated: 2022/10/03 21:27:05 by aklaikel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,6 @@ SRCS			=	cub3d.c \
 					./srcs/raycub3d.c \
 					./srcs/key_listener.c \
 					./srcs/directions.c \
-					./srcs/ft_free.c \
 					./srcs/vectorfun.c \
 					./srcs/dda_algorithm.c \
 					./srcs/color_init.c \

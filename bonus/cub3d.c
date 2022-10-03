@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   cub3d.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ael-hamd <ael-hamd@student.42.fr>          +#+  +:+       +#+        */
+/*   By: aklaikel <aklaikel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/16 18:40:00 by ael-hamd          #+#    #+#             */
-/*   Updated: 2022/10/03 21:19:27 by ael-hamd         ###   ########.fr       */
+/*   Updated: 2022/10/03 21:28:29 by aklaikel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,15 +47,15 @@ int	main(int ac, char **av)
 		return (1);
 	ft_null(&data);
 	if (!rempl_description_map(file, &data))
-		return (ft_free(file), 0);
+		return (ft_free(file), ft_free_all(&data), 0);
 	if (!check_variables(data))
-		return (0);
+		return (ft_free(file), ft_free_all(&data), 0);
 	if (!get_map(file, &data))
-		return (ft_free(file), 0);
+		return (ft_free(file), ft_free_all(&data), 0);
 	if (!check_map(data))
-		return (ft_free(file), 0);
+		return (0);
 	if (!check_player(&data))
-		return (ft_free(file), 0);
+		return (ft_free(file), ft_free_all(&data), 0);
 	raycastcub3d(data);
 	ft_free(file);
 	ft_free_all(&data);

@@ -6,7 +6,7 @@
 /*   By: aklaikel <aklaikel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/27 05:47:03 by aklaikel          #+#    #+#             */
-/*   Updated: 2022/09/29 05:32:08 by aklaikel         ###   ########.fr       */
+/*   Updated: 2022/10/03 21:30:33 by aklaikel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,8 @@ static void	load_image(t_cub *cub, char *path, t_image *img)
 		&img->width, &img->height);
 	if (!img->image)
 	{
-		_free_(cub);
+		ft_exit(cub);
 		printf("error \nloading texture in  path : %s\n", path);
-		exit(0);
 	}
 	img->adr_data = (unsigned int *)mlx_get_data_addr(img->image, \
 		&img->bpp, &img->sl, &img->endian);

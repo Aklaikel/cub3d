@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   cub3d.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ael-hamd <ael-hamd@student.42.fr>          +#+  +:+       +#+        */
+/*   By: aklaikel <aklaikel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/16 18:40:00 by ael-hamd          #+#    #+#             */
-/*   Updated: 2022/10/03 21:17:51 by ael-hamd         ###   ########.fr       */
+/*   Updated: 2022/10/03 21:22:42 by aklaikel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ int	main(int ac, char **av)
 	if (!rempl_description_map(file, &data))
 		return (ft_free(file), ft_free_all(&data), 0);
 	if (!check_variables(data))
-		return (0);
+		return (ft_free(file), ft_free_all(&data), 0);
 	if (!get_map(file, &data))
 		return (ft_free(file), ft_free_all(&data), 0);
 	if (!check_map(data))
