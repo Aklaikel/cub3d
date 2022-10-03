@@ -6,7 +6,7 @@
 /*   By: ael-hamd <ael-hamd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/11 18:54:38 by anass             #+#    #+#             */
-/*   Updated: 2022/10/03 17:11:09 by ael-hamd         ###   ########.fr       */
+/*   Updated: 2022/10/03 18:56:50 by ael-hamd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ void	raycastcub3d(t_data data)
 	cub = NULL;
 	cub = malloc(sizeof(t_cub));
 	if (!cub)
-		exit(1);
+		return ;
 	init(cub, data);
 	colors(cub);
 	loading(cub);

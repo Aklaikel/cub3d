@@ -6,7 +6,7 @@
 /*   By: ael-hamd <ael-hamd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 20:55:08 by ael-hamd          #+#    #+#             */
-/*   Updated: 2022/09/28 20:56:39 by ael-hamd         ###   ########.fr       */
+/*   Updated: 2022/10/03 18:42:51 by ael-hamd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,8 @@ void	ft_free(char **str)
 		free(str[i]);
 		i++;
 	}
-	free(str);
+	if (str)
+		free(str);
 }
 
 int	ft_isdigit(int c)

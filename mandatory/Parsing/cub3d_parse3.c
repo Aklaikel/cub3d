@@ -6,7 +6,7 @@
 /*   By: ael-hamd <ael-hamd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 00:44:13 by ael-hamd          #+#    #+#             */
-/*   Updated: 2022/10/03 16:00:15 by ael-hamd         ###   ########.fr       */
+/*   Updated: 2022/10/03 18:44:15 by ael-hamd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,6 +106,8 @@ int	get_map(char **file, t_data *data)
 	{
 		size = ft_strlen_2d(file) - k;
 		data->map = malloc((sizeof(char **) * size) + 1);
+		if (!data->map)
+			return (0);
 		str_cpy_2d(file + k, data);
 		return (1);
 	}

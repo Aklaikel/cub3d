@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   raycast.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aklaikel <aklaikel@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ael-hamd <ael-hamd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 10:05:45 by aklaikel          #+#    #+#             */
-/*   Updated: 2022/09/29 05:00:49 by aklaikel         ###   ########.fr       */
+/*   Updated: 2022/10/03 19:07:31 by ael-hamd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ int	game(t_cub *cub)
 	x = -1;
 	while (++x < SCREENW)
 	{
-		cub->camera.x = 2.0 * x / SCREENW - 1;
+		cub->camera.x = 2.0 * x / (SCREENW - 1) - 1;
 		rays(cub);
 		dda_algorithm(cub);
 		cub->walldistance = cub->whichwall.x - cub->nextside.x;

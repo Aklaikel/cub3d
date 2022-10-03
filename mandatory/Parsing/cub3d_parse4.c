@@ -6,7 +6,7 @@
 /*   By: ael-hamd <ael-hamd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 01:14:18 by ael-hamd          #+#    #+#             */
-/*   Updated: 2022/10/03 16:01:19 by ael-hamd         ###   ########.fr       */
+/*   Updated: 2022/10/03 18:37:39 by ael-hamd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,7 @@ int	ft_check_alloc(char **file, t_data *data, char d, int i)
 	int		k;
 
 	if ((d == 'F' || d == 'C') && if_color(file[i] + 2))
-				k = alloc_str(file[i] + 2, data,
-				d, ft_strlen(file[i]) - 2);
+		k = alloc_str(file[i] + 2, data, d, ft_strlen(file[i]) - 2);
 	else if ((d == 'N' || d == 'S' || d == 'W' || d == 'E'))
 		k = alloc_str(file[i] + 3, data, d, ft_strlen(file[i]) - 2);
 	else
