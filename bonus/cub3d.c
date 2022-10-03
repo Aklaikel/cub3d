@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   cub3d.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aklaikel <aklaikel@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ael-hamd <ael-hamd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/16 18:40:00 by ael-hamd          #+#    #+#             */
-/*   Updated: 2022/10/03 01:15:33 by aklaikel         ###   ########.fr       */
+/*   Updated: 2022/10/03 21:19:27 by ael-hamd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,22 @@
 static int	checknm(char *s)
 {
 	return (strncmp(s + strlen(s) - 4, ".cub", 4));
+}
+
+static int	check_variables(t_data data)
+{
+	if (!data.so || !data.ea || !data.no || !data.we)
+	{
+		printf("Error\ntexture Not valide !!\n");
+		return (0);
+	}
+	if (data.floor[0] < 0 || data.floor[1] < 0 || data.floor[2] < 0
+		|| data.ceiling[0] < 0 || data.ceiling[1] < 0 || data.ceiling[2] < 0)
+	{
+		printf("Error\nColors Not valide !!\n");
+		return (0);
+	}
+	return (1);
 }
 
 int	main(int ac, char **av)
@@ -32,8 +48,8 @@ int	main(int ac, char **av)
 	ft_null(&data);
 	if (!rempl_description_map(file, &data))
 		return (ft_free(file), 0);
-	if (!data.so || !data.ea || !data.no || !data.we)
-		return (printf("Error\ntexture Not valide !!\n"), 0);
+	if (!check_variables(data))
+		return (0);
 	if (!get_map(file, &data))
 		return (ft_free(file), 0);
 	if (!check_map(data))
