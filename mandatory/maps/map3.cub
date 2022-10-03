@@ -1,10 +1,10 @@
-NO ./texture/wall1.xpm
+NO ./texture/NO.xpm
 
-SO ./texture/wall1.xpm
+SO ./texture/SO.xpm
 
-WE ./texture/wall2.xpm
+WE ./texture/WE.xpm
 
-EA ./texture/wall2.xpm
+EA ./texture/EA.xpm
 
 F 0,0,0
 
@@ -21,5 +21,5 @@ C 100,105,104
 10000000000000000001
 10000000000000000001
 10000000000000000001
-100000000000000000N1
+10000000000N00000001
 11111111111111111111

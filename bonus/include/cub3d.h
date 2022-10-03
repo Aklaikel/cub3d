@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   cub3d.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aklaikel <aklaikel@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ael-hamd <ael-hamd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/16 18:40:04 by ael-hamd          #+#    #+#             */
-/*   Updated: 2022/09/29 23:36:09 by aklaikel         ###   ########.fr       */
+/*   Updated: 2022/10/03 01:06:28 by ael-hamd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -163,6 +163,7 @@ int		check_element(char	*str);
 int		check_player(t_data *data);
 int		check_map(t_data data);
 void	ft_null(t_data *data);
+void	ft_free_all(t_data *data);
 
 // raycasting
 
