@@ -6,7 +6,7 @@
 /*   By: aklaikel <aklaikel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/16 18:40:04 by ael-hamd          #+#    #+#             */
-/*   Updated: 2022/09/29 23:36:09 by aklaikel         ###   ########.fr       */
+/*   Updated: 2022/09/30 00:10:48 by aklaikel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -184,6 +184,5 @@ void	colors(t_cub *cub);
 void	loading(t_cub *cub);
 void	drawtoscreen(t_cub *cub, int x);
 int		game(t_cub *cub);
-void	_free_(t_cub *cub);
 
 #endif

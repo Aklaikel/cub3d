@@ -6,7 +6,7 @@
 #    By: aklaikel <aklaikel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/16 18:45:57 by ael-hamd          #+#    #+#              #
-#    Updated: 2022/09/29 22:48:37 by aklaikel         ###   ########.fr        #
+#    Updated: 2022/10/02 14:19:11 by aklaikel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,14 +29,13 @@ SRCS			=	cub3d.c \
 					./srcs/color_init.c \
 					./srcs/load_imgs.c  \
 					./srcs/drawtoscreen.c \
-					./srcs/ft_free.c \
 					./srcs/raycast.c 
 					
 OBJS			=	$(SRCS:.c=.o)
 
 CC				= 	cc
 RM				= 	rm -f
-CFLAGS			= 	-Wall 
+CFLAGS			= 	-Wall -Wextra -Werror
 MLXFLAGS		= 	-lmlx -framework OpenGL -framework AppKit
 HEADER			= 	include/cub3d.h
 
@@ -51,10 +50,5 @@ ${NAME}:  			$(MLX) $(OBJS)
 
 clean:				
 					$(RM) $(OBJS) $(BOBJS)
-
-fclean:				clean
-					$(RM) ${NAME}
-
-re:					fclean all
 
 .PHONY:				all clean fclean re

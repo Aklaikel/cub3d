@@ -6,7 +6,7 @@
 /*   By: aklaikel <aklaikel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 21:09:14 by aklaikel          #+#    #+#             */
-/*   Updated: 2022/09/29 05:38:58 by aklaikel         ###   ########.fr       */
+/*   Updated: 2022/09/30 00:10:36 by aklaikel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,7 @@ void	move_left(t_cub *cub)
 
 int	ft_exit(t_cub *cub)
 {
-	_free_(cub);
+	free(cub);
 	exit(0);
 	return (0);
 }

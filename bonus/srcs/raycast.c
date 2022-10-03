@@ -6,7 +6,7 @@
 /*   By: aklaikel <aklaikel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 10:05:45 by aklaikel          #+#    #+#             */
-/*   Updated: 2022/09/29 23:42:02 by aklaikel         ###   ########.fr       */
+/*   Updated: 2022/10/02 05:04:33 by aklaikel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@ static void	render_butterfly(t_cub *cub)
 	static int	i;
 
 	mlx_put_image_to_window(cub->mlx_ptr, cub->mlx_window, \
-		cub->man[i / 5].image, \
-		SCREENW / 4, SCREENH - cub->man[i / 5].height);
-	i = (i + 1) % 145;
+		cub->butterfly[i / 10].image, \
+		SCREENW / 4, SCREENH - cub->butterfly[i / 10].height);
+	i = (i + 1) % 40;
 }
 
 static void	rays(t_cub *cub)
@@ -29,7 +29,6 @@ static void	rays(t_cub *cub)
 	cub->raydirection.y = cub->direction.y + cub->plan.y * cub-> camera.x;
 	cub->map.x = (int)cub->postion.x;
 	cub->map.y = (int)cub->postion.y;
-	cub->wallhit = 0;
 	cub->nextside.x = fabs(1 / cub->raydirection.x);
 	cub->nextside.y = fabs(1 / cub->raydirection.y);
 	cub->whatdirection.x = 1;
