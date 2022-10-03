@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   cub3d.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aklaikel <aklaikel@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ael-hamd <ael-hamd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/16 18:40:00 by ael-hamd          #+#    #+#             */
-/*   Updated: 2022/09/29 23:24:46 by aklaikel         ###   ########.fr       */
+/*   Updated: 2022/10/03 00:51:15 by ael-hamd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,5 +42,6 @@ int	main(int ac, char **av)
 		return (ft_free(file), 0);
 	raycastcub3d(data);
 	ft_free(file);
+	ft_free_all(&data);
 	return (0);
 }

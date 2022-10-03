@@ -6,7 +6,7 @@
 #    By: aklaikel <aklaikel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/16 18:45:57 by ael-hamd          #+#    #+#              #
-#    Updated: 2022/10/02 14:19:11 by aklaikel         ###   ########.fr        #
+#    Updated: 2022/10/03 01:16:25 by aklaikel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -50,5 +50,8 @@ ${NAME}:  			$(MLX) $(OBJS)
 
 clean:				
 					$(RM) $(OBJS) $(BOBJS)
+
+fclean:				clean
+					$(RM) ${NAME}
 
 .PHONY:				all clean fclean re

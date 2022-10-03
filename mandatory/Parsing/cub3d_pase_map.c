@@ -6,7 +6,7 @@
 /*   By: ael-hamd <ael-hamd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 20:14:27 by ael-hamd          #+#    #+#             */
-/*   Updated: 2022/09/29 19:48:06 by ael-hamd         ###   ########.fr       */
+/*   Updated: 2022/10/03 01:00:09 by ael-hamd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,18 @@ int	ft_check_zero(t_data data, int i, int j)
 	return (0);
 }
 
+static	int	ft_condition(t_data data, int i, int j)
+{
+	if (data.map[i][j] == '0' || data.map[i][j] == 'N'
+			|| data.map[i][j] == 'W' || data.map[i][j] == 'S'
+			|| data.map[i][j] == 'E')
+	{
+		if (ft_check_zero(data, i, j))
+			return (1);
+	}
+	return (0);
+}
+
 int	check_map(t_data data)
 {
 	int		i;
@@ -51,14 +63,25 @@ int	check_map(t_data data)
 			return (0);
 		while (data.map[i][j])
 		{
-			if (data.map[i][j] == '0')
-			{
-				if (ft_check_zero(data, i, j))
-					return (0);
-			}
+			if (ft_condition(data, i, j))
+				return (0);
 			j++;
 		}
 		i++;
 	}
 	return (1);
+}
+
+void	ft_free_all(t_data *data)
+{
+	if (data->no)
+		free(data->no);
+	if (data->so)
+		free(data->so);
+	if (data->ea)
+		free(data->ea);
+	if (data->we)
+		free(data->we);
+	if (data->map)
+		ft_free(data->map);
 }

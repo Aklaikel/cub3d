@@ -6,7 +6,7 @@
 /*   By: aklaikel <aklaikel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/16 18:40:00 by ael-hamd          #+#    #+#             */
-/*   Updated: 2022/09/29 23:56:55 by aklaikel         ###   ########.fr       */
+/*   Updated: 2022/10/03 01:15:33 by aklaikel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,5 +41,7 @@ int	main(int ac, char **av)
 	if (!check_player(&data))
 		return (ft_free(file), 0);
 	raycastcub3d(data);
+	ft_free(file);
+	ft_free_all(&data);
 	return (0);
 }
