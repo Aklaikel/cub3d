@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   load_imgs.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aklaikel <aklaikel@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ael-hamd <ael-hamd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/27 05:47:03 by aklaikel          #+#    #+#             */
-/*   Updated: 2022/10/03 01:09:10 by aklaikel         ###   ########.fr       */
+/*   Updated: 2022/10/03 16:58:26 by ael-hamd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ static void	load_image(t_cub *cub, char *path, t_image *img)
 	img->adr_data = (unsigned int *)mlx_get_data_addr(img->image, \
 		&img->bpp, &img->sl, &img->endian);
 }
-
 
 void	loading(t_cub *cub)
 {

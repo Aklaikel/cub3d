@@ -1,12 +1,12 @@
- /* ************************************************************************** */
+/* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   raycub3d.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aklaikel <aklaikel@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ael-hamd <ael-hamd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/11 18:54:38 by anass             #+#    #+#             */
-/*   Updated: 2022/09/29 17:53:36 by aklaikel         ###   ########.fr       */
+/*   Updated: 2022/10/03 17:11:09 by ael-hamd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,7 @@ void	raycastcub3d(t_data data)
 	mlx_loop_hook(cub->mlx_ptr, &game, cub);
 	mlx_hook(cub->mlx_window, 3, 2, key_release, cub);
 	mlx_hook(cub->mlx_window, 2, 1, key_press, cub);
-	mlx_hook(cub->mlx_window, 17, 1L, ft_exit, cub);
 	mlx_hook(cub->mlx_window, 6, 1L, souris, cub);
+	mlx_hook(cub->mlx_window, 17, 1L, ft_exit, cub);
 	mlx_loop(cub->mlx_ptr);
 }

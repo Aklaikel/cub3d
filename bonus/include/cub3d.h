@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   cub3d.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aklaikel <aklaikel@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ael-hamd <ael-hamd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/16 18:40:04 by ael-hamd          #+#    #+#             */
-/*   Updated: 2022/10/03 01:15:23 by aklaikel         ###   ########.fr       */
+/*   Updated: 2022/10/03 18:25:46 by ael-hamd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -142,7 +142,7 @@ int		ft_strlen(const char *s);
 int		ft_strlen_2d(char **s);
 void	ft_free(char **str);
 int		ft_isdigit(int c);
-int		ft_atoi(const char *str);
+int		ft_atoi(char *str);
 char	**ft_read(int fd);
 void	ft_strcpy(char *dir, char *s);
 int		max_lenght(char **s);

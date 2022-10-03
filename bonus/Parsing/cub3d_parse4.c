@@ -6,7 +6,7 @@
 /*   By: ael-hamd <ael-hamd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 01:14:18 by ael-hamd          #+#    #+#             */
-/*   Updated: 2022/09/29 21:40:39 by ael-hamd         ###   ########.fr       */
+/*   Updated: 2022/10/03 16:01:33 by ael-hamd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ int	ft_check_alloc(char **file, t_data *data, char d, int i)
 		k = alloc_str(file[i] + 3, data, d, ft_strlen(file[i]) - 2);
 	else
 	{
-		printf("Error\nError\n");
+		printf("Error\nMap Error\n");
 		return (0);
 	}
 	if (!k)

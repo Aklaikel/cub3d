@@ -6,17 +6,19 @@
 /*   By: ael-hamd <ael-hamd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/08 21:23:38 by ael-hamd          #+#    #+#             */
-/*   Updated: 2022/10/03 00:53:08 by ael-hamd         ###   ########.fr       */
+/*   Updated: 2022/10/03 16:25:34 by ael-hamd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/cub3d.h"
 
-int	ft_atoi(const char *str)
+int	ft_atoi(char *str)
 {
 	long	res;
 
 	res = 0;
+	while (*str == ' ')
+		str++;
 	if (*str == '\0' || *str == '-')
 		return (-1);
 	while (*str != '\0' && *str >= '0' && *str <= '9')

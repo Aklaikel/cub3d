@@ -6,7 +6,7 @@
 /*   By: ael-hamd <ael-hamd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/29 23:15:19 by aklaikel          #+#    #+#             */
-/*   Updated: 2022/10/03 00:51:57 by ael-hamd         ###   ########.fr       */
+/*   Updated: 2022/10/03 16:25:44 by ael-hamd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -136,7 +136,7 @@ int		ft_strlen(const char *s);
 int		ft_strlen_2d(char **s);
 void	ft_free(char **str);
 int		ft_isdigit(int c);
-int		ft_atoi(const char *str);
+int		ft_atoi(char *str);
 char	**ft_read(int fd);
 void	ft_strcpy(char *dir, char *s);
 int		max_lenght(char **s);
